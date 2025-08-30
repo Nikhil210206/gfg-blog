@@ -1,22 +1,28 @@
+import { Box, Container, Flex, Heading, Link as ChakraLink } from '@chakra-ui/react';
 import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav className="bg-gray-800 border-b border-gray-700 p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-white text-xl font-bold hover:text-yellow-400">
-          The Spellbook
+    <Box bg="gray.800" borderBottom="1px" borderColor="gray.700" p={4}>
+      <Container maxW="container.xl" as={Flex} justify="space-between" align="center">
+        <Link href="/" passHref>
+          <Heading as="a" size="md" color="white" _hover={{ color: 'yellow.400' }}>
+            The Spellbook
+          </Heading>
         </Link>
-        <div>
-          <Link href="/" className="text-gray-300 hover:text-white mr-4">
-            The Great Hall
+        <Box>
+          <Link href="/" passHref>
+            <ChakraLink color="gray.300" _hover={{ color: 'white' }} mr={4}>
+              The Great Hall
+            </ChakraLink>
           </Link>
-          {/* We'll build this page later, but the link is ready! */}
-          <Link href="/projects" className="text-gray-300 hover:text-white">
-            The Library
+          <Link href="/projects" passHref>
+            <ChakraLink color="gray.300" _hover={{ color: 'white' }}>
+              The Library
+            </ChakraLink>
           </Link>
-        </div>
-      </div>
-    </nav>
+        </Box>
+      </Container>
+    </Box>
   );
 }

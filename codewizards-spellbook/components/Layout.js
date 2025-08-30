@@ -1,14 +1,15 @@
+import { Box, Container } from '@chakra-ui/react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
 export default function Layout({ children }) {
   return (
-    <div className="bg-gray-900 min-h-screen flex flex-col">
+    <Box bg="gray.900" minH="100vh" display="flex" flexDirection="column">
       <Navbar />
-      <main className="flex-grow container mx-auto p-4 md:p-8">
+      <Container as="main" maxW="container.xl" flex="1" p={{ base: 4, md: 8 }}>
         {children}
-      </main>
+      </Container>
       <Footer />
-    </div>
+    </Box>
   );
 }

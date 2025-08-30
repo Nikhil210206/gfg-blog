@@ -1,15 +1,29 @@
+import { Box, Heading, Text, Tag } from '@chakra-ui/react';
+
 export default function ProjectCard({ spell }) {
   return (
-    <div className="bg-gray-800 border border-gray-700 rounded-lg p-6 
-                    transform hover:scale-105 hover:border-yellow-400 
-                    transition-transform duration-300 cursor-pointer">
-      <h2 className="text-2xl font-semibold text-yellow-500">{spell.name}</h2>
-      <p className="mt-2 text-gray-300">{spell.short_description}</p>
-      <div className="mt-4">
-        <span className="text-sm bg-gray-700 text-yellow-300 px-2 py-1 rounded">
-          School of Magic: {spell.school_of_magic}
-        </span>
-      </div>
-    </div>
+    <Box
+      bg="gray.800"
+      border="1px"
+      borderColor="gray.700"
+      borderRadius="lg"
+      p={6}
+      cursor="pointer"
+      transition="transform 0.3s, border-color 0.3s"
+      _hover={{
+        transform: 'scale(1.05)',
+        borderColor: 'yellow.400',
+      }}
+    >
+      <Heading as="h2" size="lg" color="yellow.500">
+        {spell.name}
+      </Heading>
+      <Text mt={2} color="gray.300">
+        {spell.short_description}
+      </Text>
+      <Tag mt={4} bg="gray.700" color="yellow.300">
+        School of Magic: {spell.school_of_magic}
+      </Tag>
+    </Box>
   );
 }
