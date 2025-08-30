@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import ProjectCard from '../components/ProjectCard';
 
 export default function Home({ spells }) {
   return (
@@ -11,10 +12,7 @@ export default function Home({ spells }) {
 
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {spells.map((spell) => (
-          <div key={spell.id} className="bg-gray-800 border border-gray-700 rounded-lg p-6">
-            <h2 className="text-2xl font-semibold text-yellow-400">{spell.name}</h2>
-            <p className="mt-2 text-gray-300">{spell.short_description}</p>
-          </div>
+          <ProjectCard key={spell.id} spell={spell} />
         ))}
       </div>
     </main>
