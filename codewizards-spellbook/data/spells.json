@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "slug": "potion-of-perpetual-motion",
+    "name": "Potion of Perpetual Motion",
+    "short_description": "An advanced potion that guides users through rigorous physical enchantments using a Seer's Mirror.",
+    "school_of_magic": "Divination",
+    "markdown_content": "### The Spell's Purpose\n\nThis is a full-length description of my AI Fitness App. I'll talk about the challenges, the tech stack, and what I learned...\n\n### Ingredients (Tech Stack)\n\n* Python\n* OpenCV\n* React\n* TensorFlow.js",
+    "image": "/images/fitness-potion.png"
+  },
+  {
+    "id": 2,
+    "slug": "prefects-vigilance-charm",
+    "name": "Prefect's Vigilance Charm",
+    "short_description": "A powerful charm to uphold academic integrity, monitoring for unsanctioned magical activity.",
+    "school_of_magic": "Divination",
+    "markdown_content": "### The Spell's Purpose\n\nThis is the deep dive into my remote proctoring system. The goal was to create a fair and secure environment for remote examinations...\n\n### Wand Core Components (Tech Stack)\n\n* JavaScript\n* WebRTC\n* Node.js\n* Socket.io",
+    "image": "/images/proctoring-eye.png"
+  }
+]
