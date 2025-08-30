@@ -4,9 +4,9 @@ import ProjectCard from '../components/ProjectCard';
 
 export default function Home({ spells }) {
   return (
-    <main className="bg-gray-900 min-h-screen p-8 text-white">
+    <>
       <div className="text-center">
-        <h1 className="text-5xl font-bold">The Code-Wizard's Spellbook</h1>
+        <h1 className="text-5xl font-bold text-white">The Code-Wizard's Spellbook</h1>
         <p className="mt-2 text-lg text-gray-400">A Geek's Field Guide to Modern Muggle Magic</p>
       </div>
 
@@ -15,12 +15,13 @@ export default function Home({ spells }) {
           <ProjectCard key={spell.id} spell={spell} />
         ))}
       </div>
-    </main>
+    </>
   )
 }
 
 
 export async function getStaticProps() {
+  // ... (this function does not change)
   const filePath = path.join(process.cwd(), 'data', 'spells.json');
   const jsonData = await fs.readFileSync(filePath);
   const data = JSON.parse(jsonData);
